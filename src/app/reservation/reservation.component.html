@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row" ng-app="myApp" ng-controller="maincntrl">
+        <div class="col-md-offset-1 col-md-6 col-sm-12" >
+            <div class="login">
+                <h2>Reservation</h2>
+                <hr>
+                <!--Code of form started-->
+                <form class="form-horizontal" name="frm" novalidate>
+                    <!--Code to validate first name is written here-->
+                    <div class="form-group" >
+                        <label id="label" class="control-label">Name:</label>
+                        <input type="text" class="form-control" name="username" ng-model="user.name" placeholder="Enter Full Name" autocomplete="off" required />
+                    </div>
+                    <!--Code to validate email address is written here-->
+                    <div class="form-group">
+                        <label id="label" class="control-label">Email:</label>
+                        <input type="email" class="form-control" ng-model="user.email" name="email" placeholder="Enter Email Address" autocomplete="off" required>
+                        <span class="msg" ng-show="frm.email.$dirty && frm.email.$invalid">Email Address is not valid</span>
+                    </div>
+                    <!--Code to validate password is written here-->
+                    <div class="form-group">
+                        <label id="label" class="control-label">No of Tickets:</label>
+                        <input type="text" class="form-control" ng-model="user.pass" name="pass" placeholder="Enter No of Tickets" autocomplete="off" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label id="label" class="control-label">Package Name:</label>
+                        <input type="text" class="form-control" ng-model="user.pass" name="pass" placeholder="Enter Package Name" autocomplete="off" required>
+                    </div>
+
+                   
+                    <!--Code to validate gender field
+                    <div class="form-group">
+                        <label id="label" >Gender:</label>&nbsp;&nbsp;&nbsp;
+                        Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" ng-model="user.gender" value="male" required>
+                        &nbsp;&nbsp;&nbsp;&nbsp  Female   <input type="radio" name="gender" ng-model="user.gender" value="female" required></br>
+                        <span class="msg" ng-show="frm.gender.$error.required">select any gender</span>
+                    </div>-->
+                    <!--Code to validate country field-->
+                    <div class="form-group">
+                        <label id="label" class="control-label">Package Type:</label>
+                        <select class="form-control" ng-model="user.country" name="cont" required>
+                            <option value="economy">Economy</option>
+                            <option value="buisness">Buisness</option>
+                        </select>
+                        <span class="msg" ng-show="frm.cont.$error.required">Select a value</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="label" class="control-label">Departure Date:</label>
+                        <input type="date" class="form-control" ng-model="user.pass" name="pass" placeholder="Enter Departure Name" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="label" class="control-label">Arrival Date:</label>
+                        <input type="date" class="form-control" ng-model="user.pass" name="pass" placeholder="Enter Arrival Name" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="label" class="control-label">Vehicle Type:</label>
+                        <select class="form-control" ng-model="user.country" name="cont" required>
+                            <option value="car">Car</option>
+                            <option value="jeep">Jeep</option>
+                            <option value="vagon">Vagon</option>
+                        </select>
+                        <span class="msg" ng-show="frm.cont.$error.required">Select a value</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="label" class="control-label">Hotel Type:</label>
+                        <select class="form-control" ng-model="user.country" name="cont" required>
+                            <option value="five star hotel">Five Star Hotel</option>
+                            <option value="three star hotel">Three Star Hotel</option>
+                        </select>
+                        <span class="msg" ng-show="frm.cont.$error.required">Select a value</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="label" class="control-label">Phone Number:</label>
+                        <input type="number" class="form-control" ng-model="user.pass" name="pass" placeholder="Enter Phone Number" autocomplete="off" required>
+                    </div>
+
+                     <!-- Code to validate message input box -->
+                     <div class="form-group">
+                        <label id="label" class="control-label">Address:</label>
+                        <textarea type="textarea" rows="2" cols="50" name="address" class="form-control" ng-model="user.message" placeholder="Enter Your Address" autocomplete="off" required></textarea><br>
+                        <span class="msg" ng-show="frm.message.$error.required">Enter a message</span>
+                    </div>
+
+                    <!--Code to disable submit button is written here-->
+                    <div class="form-group">
+                        <input ng-disabled="frm.$invalid" class="btn btn-primary" type="submit" ng-click="call()" value="Submit">
+                    </div>
+                </form>							
+            </div>
+        </div>
+
+        

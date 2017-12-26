@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row" ng-app="myApp" ng-controller="maincntrl">
+        <div class="col-md-offset-1 col-md-6 col-sm-12" >
+            <div class="login">
+                <h2>Registration Form</h2>
+                <hr>
+                <!--Code of form started-->
+                <form class="form-horizontal" name="frm" novalidate>
+                    <!--Code to validate first name is written here-->
+                    <div class="form-group" >
+                        <label id="label" class="control-label">Name:</label>
+                        <input type="text" class="form-control" name="name" ng-model="user.name" placeholder="Enter Name" autocomplete="off" required />
+                    </div>
+                    <!--Code to validate email address is written here-->
+                    <div class="form-group">
+                        <label id="label" class="control-label">Email:</label>
+                        <input type="email" class="form-control" ng-model="user.email" name="email" placeholder="Enter Email Address" autocomplete="off" required>
+                        <span class="msg" ng-show="frm.email.$dirty && frm.email.$invalid">Email Address is not valid</span>
+                    </div>
+
+                    <div class="form-group" >
+                        <label id="label" class="control-label">Username:</label>
+                        <input type="text" class="form-control" name="username" ng-model="user.username" placeholder="Enter Username" autocomplete="off" required />
+                    </div>
+                    <!--Code to validate password is written here-->
+                    <div class="form-group">
+                        <label id="label" class="control-label">Password:</label>
+                        <input type="password" class="form-control" ng-model="user.pass" name="pass" placeholder="Enter Password" autocomplete="off" ng-minlength="5" ng-maxlength="12" required>
+                        <span class="msg" ng-show="frm.pass.$dirty && frm.pass.$error.minlength">password must contain atleast 5 charecters</span>
+                        <span class="msg" ng-show="frm.pass.$dirty && frm.pass.$error.maxlength">max-length of password reached</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="label" class="control-label">Phone Number:</label>
+                        <input type="number" class="form-control" ng-model="user.phone" name="phone" placeholder="Enter Phone Number" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input ng-disabled="frm.$invalid" class="btn btn-primary" type="submit" ng-click="call()" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    

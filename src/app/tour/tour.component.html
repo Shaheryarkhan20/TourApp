@@ -1,0 +1,118 @@
+
+    <script src="js/jquery.min.js"></script>
+  
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  
+  <script src="js/jquery.chocolat.js"></script>
+  <!--lightboxfiles-->
+  <script type="text/javascript">
+  $(function() {
+   $('.gallery a').Chocolat();
+  });
+  </script>
+  
+  <!--startsmothscrolling-->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){		
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+      });
+    });
+  </script>
+  
+  <script src="js/modernizr.custom.97074.js"></script>
+
+<div class="gallery" id="tours">
+  <div class="container">
+    <h3 class="tittle">Tours</h3>
+    <div class="gallery-grids">
+      <section>
+        <ul id="da-thumbs" class="da-thumbs">
+          <li>
+            <a href="../../assets/images/a1.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a1.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a2.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a2.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a3.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a3.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a4.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a4.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>	
+            <a href="../../assets/images/a5.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a5.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a6.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a6.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a7.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a7.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a1.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a1.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="../../assets/images/a2.jpg" class="b-link-stripe b-animate-go thickbox">
+              <img src="../../assets/images/a2.jpg" alt="" />
+              <div>
+                <h5>Trip Guide</h5>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </section>
+    </div>
+    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+    <script type="text/javascript">
+      $(function() {
+        $('#da-thumbs > li').each( function() { $(this).hoverdir(); } );
+      });
+    </script>
+  </div>
+</div>
+
